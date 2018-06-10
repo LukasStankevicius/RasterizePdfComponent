@@ -1,5 +1,6 @@
 using System;
 using RasterizePdfComponent;
+using System.IO;
 
 namespace User
 {
@@ -7,9 +8,15 @@ namespace User
     {
         static void Main(string[] args)
         {
-            string pdfToConvertPath = @"E:\MainTestFolder\TestPdf.pdf";
-            RasterizePdf sample = new RasterizePdf(pdfToConvertPath);
-            sample.Convert();
+            string filePathsRoot = @"E:\MainTestFolder\";
+            string pdfToConvertPath;
+            int num_of_pdf_files = 10;
+            for (int i = 1; i <= num_of_pdf_files; i++)
+            {
+                pdfToConvertPath = Path.Combine(filePathsRoot, "FileNr"+i.ToString() + ".pdf");
+                RasterizePdf sample = new RasterizePdf(pdfToConvertPath);
+                sample.Convert();
+            }
         }
     }
 }
