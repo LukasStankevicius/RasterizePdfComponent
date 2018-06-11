@@ -11,5 +11,24 @@ This component uses [Ghostscript.NET](https://github.com/jhabjan/Ghostscript.NET
 * teachers can make their pdf material non searchable / non copyable;
 * a way to simplify overcomplicated vectorized pdf's.
 
-## How to
+## Installation guide
 1. Make sure you have native [ghostscript](https://www.ghostscript.com/download/gsdnld.html) library (gsdll32.dll, version >= 9.23) installed
+2. Add project from NuGet in Visual Studio:
+   - Select your .NET project
+   - Right click References
+   - Click Manage NuGet Packages...
+   - In Browse tab  search for RasterizePdfComponent
+   - install RasterizePdfComponent and other associate packages
+
+## At its simplest:
+```
+using RasterizePdfComponent;
+RasterizePdf sample = new RasterizePdf(@"E:\MainTestFolder\MyTestPdf.pdf");
+sample.Convert();
+```
+Converted file will have dpi=100 and be located at E:\MainTestFolder\MyTestPdf_Rasterized.pdf
+
+For more detailed example please look [here](https://github.com/LukasStankevicius/RasterizePdfComponent/blob/master/User/Program.cs)
+## Available on:
+* GitHub: https://github.com/LukasStankevicius/RasterizePdfComponent
+* NuGet: https://www.nuget.org/packages/RasterizePdfComponent/
