@@ -23,6 +23,8 @@ This component uses [Ghostscript.NET](https://github.com/jhabjan/Ghostscript.NET
 ## At its simplest:
 ```
 using RasterizePdfComponent;
+```
+```
 RasterizePdf sample = new RasterizePdf(@"E:\MainTestFolder\MyTestPdf.pdf");
 sample.Convert();
 ```
